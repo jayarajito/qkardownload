@@ -27,3 +27,8 @@ git pull ME_QKART_FRONTEND_V2_MODULE_LOGIN_STUB master --allow-unrelated-histori
 cd /home/crio-user/workspace/jayarajito-ME_QKART_FRONTEND_V2/
 chmod +x setup.sh
 ./setup.sh
+
+
+
+
+curl -d '{"username":"crio.do", "password":"learnbydoing"}' -H "Content-Type: application/json" -X POST http://15.206.158.163:8082/api/v1/auth/login
