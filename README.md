@@ -32,3 +32,31 @@ chmod +x setup.sh
 
 
 curl -d '{"username":"crio.do", "password":"learnbydoing"}' -H "Content-Type: application/json" -X POST http://15.206.158.163:8082/api/v1/auth/login
+
+
+
+cd ~/workspace/jayarajito-ME_QKART_FRONTEND_V2
+git add .
+git commit -m “ME_QKART_FRONTEND_V2_MODULE_LOGIN”
+git push -u origin master
+
+# Ensure you have no pending commits
+git status
+
+
+
+
+If all the tests are passing locally but the assessment fails, pull the latest stubs using below commands and ensure all the tests are passing locally
+
+
+
+cd ~/workspace/jayarajito-ME_QKART_FRONTEND_V2/
+git pull ME_QKART_FRONTEND_V2_MODULE_LOGIN_STUB master --allow-unrelated-histories --no-edit
+
+
+
+After you have pushed your changes, you can check this link to confirm if the remote Git repo has received your code.
+
+
+
+
