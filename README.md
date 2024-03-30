@@ -127,3 +127,13 @@ cd ~/workspace/jayarajito-ME_QKART_FRONTEND_V2/
 git pull ME_QKART_FRONTEND_V2_MODULE_PRODUCTS_STUB master --allow-unrelated-histories --no-edit
 
 
+
+
+# Go into the cloned repo directory.
+cd ~/workspace/jayarajito-ME_QKART_FRONTEND_V2/
+
+# Setup the remote repository & pull the code stubs for this module.
+git remote add ME_QKART_FRONTEND_V2_MODULE_CART_STUB git@gitlab.crio.do:ME_QKART_FRONTEND_V2_STUBS/ME_QKART_FRONTEND_V2_MODULE_CART_STUB.git
+git pull ME_QKART_FRONTEND_V2_MODULE_CART_STUB master --allow-unrelated-histories --no-edit
+
+
