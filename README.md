@@ -106,3 +106,24 @@ Unmerged paths:
         both added:      src/index.js
         both added:      src/ipConfig.json
 
+
+        
+
+cd ~/workspace/jayarajito-ME_QKART_FRONTEND_V2
+git add .
+git commit -m “ME_QKART_FRONTEND_V2_MODULE_PRODUCTS”
+git push -u origin master
+
+# Ensure you have no pending commits
+git status
+
+
+
+If all the tests are passing locally but the assessment fails, pull the latest stubs using below commands and ensure all the tests are passing locally
+
+
+
+cd ~/workspace/jayarajito-ME_QKART_FRONTEND_V2/
+git pull ME_QKART_FRONTEND_V2_MODULE_PRODUCTS_STUB master --allow-unrelated-histories --no-edit
+
+
