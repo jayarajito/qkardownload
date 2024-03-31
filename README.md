@@ -263,3 +263,22 @@ Post: http://3.111.215.64:8082/api/v1/auth/login
     "username": "jayarajito@gmail.com",
     "balance": 5000
 }
+
+
+
+
+cd ~/workspace/jayarajito-ME_QKART_FRONTEND_V2
+git add .
+git commit -m “ME_QKART_FRONTEND_V2_MODULE_CART”
+git push -u origin master
+
+# Ensure you have no pending commits
+git status
+
+Note
+If all the tests are passing locally but the assessment fails, pull the latest stubs using below commands and ensure all the tests are passing locally
+
+
+
+cd ~/workspace/jayarajito-ME_QKART_FRONTEND_V2/
+git pull ME_QKART_FRONTEND_V2_MODULE_CART_STUB master --allow-unrelated-histories --no-edit
