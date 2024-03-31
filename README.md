@@ -361,3 +361,94 @@ git pull ME_QKART_FRONTEND_V2_MODULE_CHECKOUT_STUB master --allow-unrelated-hist
 After you have pushed your changes, you can check this link to confirm if the remote Git repo has received your code.
 
 https://gitlab.crio.do/COHORT_ME_QKART_FRONTEND_V2_ENROLL_1684925308327/jayarajito-ME_QKART_FRONTEND_V2
+
+
+
+
+Render is the platform where you’ll deploy your backend and Vercel is the platform where you’ll deploy your frontend.
+
+
+Set up project for assessment
+Replace your "CRIO/metadata.json" file contents with the below one
+
+
+
+
+{
+
+    "module_id": "ME_QKART_FRONTEND_V2_MODULE_DEPLOYMENT",
+
+    "me_id": "ME_QKART_FRONTEND_V2"
+
+}
+
+
+
+Start by signing in to Render with Google Sign-in here.
+
+https://dashboard.render.com/
+
+In the dashboard, click "New +" button then select the second option which is Web Services.
+
+In the Create a new Web Service, click on Connect GitHub, here you will select your GitHub repository which contains your project.
+
+You will be redirected to the below page, here just give the name for your web service i.e "Name" = qkart-frontend, “Root Directory” = backend and “Start Command” = npm start
+
+"Name" = myqkart-frontend, “Root Directory” = backend and “Start Command” = npm start
+
+             Then click on "Create Web Service"
+
+             ==> Your service is live 🎉
+QKart Backend running at port 10000
+
+https://myqkart-frontend.onrender.com
+
+https://myqkart-frontend.onrender.com/api/v1/products
+
+
+To Fork the repository from the Crio GitLab account into your personal GitHub account our Crio team has to push your codes, for this kindly raise a new chat to the Platform team.
+
+
+
+Set up GitHub Copilot
+Use GitHub's AI pair programmer to autocomplete suggestions as you code.
+
+Add collaborators to this repository
+Search for people using their GitHub username or email address.
+
+Quick setup — if you’ve done this kind of thing before
+or	
+https://github.com/jayarajito/QKART.git
+Get started by creating a new file or uploading an existing file. We recommend every repository include a README, LICENSE, and .gitignore.
+
+…or create a new repository on the command line
+echo "# QKART" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/jayarajito/QKART.git
+git push -u origin main
+…or push an existing repository from the command line
+git remote add origin https://github.com/jayarajito/QKART.git
+git branch -M main
+git push -u origin main
+…or import code from another repository
+You can initialize this repository with code from a Subversion, Mercurial, or TFS project.
+
+
+
+git clone https://github.com/jayarajito/QKART.git
+
+git add .
+
+git commit -m "first commit"
+
+git remote add originqkart https://github.com/jayarajito/QKART.git
+
+git branch -M main
+
+git push -u originqkart main
+
+
+
