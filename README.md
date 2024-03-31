@@ -228,6 +228,14 @@ curl 'http://localhost:8082/api/v1/cart' \
   -H 'Content-Type: application/json' \
   --data-raw '{"productId":"BW0jAAeDJmlZCF8i","qty":1}' \
 
+
+  curl 'http://localhost:8082/api/v1/cart' \
+  -H 'Authorization: Bearer tteyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImpheWFyYWppdG9AZ21haWwuY29tIiwiaWF0IjoxNzExOTE1OTMxLCJleHAiOjE3MTE5Mzc1MzF9.CThlNQGyUPNRosXNVckCrw4bKVe8evsb_PfvfOLTBYg' \
+  -H 'Content-Type: application/json' \
+  --data-raw '{"productId":"BW0jAAeDJmlZCF8i","qty":1}' \
+
+  
+
   curl 'http://localhost:8082/api/v1/cart' \
   -H 'Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImpheWFyYWppdG9AZ21haWwuY29tIiwiaWF0IjoxNzExOTE1OTMxLCJleHAiOjE3MTE5Mzc1MzF9.CThlNQGyUPNRosXNVckCrw4bKVe8evsb_PfvfOLTBYg' \
   -H 'Content-Type: application/json' \
@@ -282,3 +290,74 @@ If all the tests are passing locally but the assessment fails, pull the latest s
 
 cd ~/workspace/jayarajito-ME_QKART_FRONTEND_V2/
 git pull ME_QKART_FRONTEND_V2_MODULE_CART_STUB master --allow-unrelated-histories --no-edit
+
+
+
+
+
+# Go into the cloned repo directory.
+cd ~/workspace/jayarajito-ME_QKART_FRONTEND_V2/
+
+# Setup the remote repository & pull the code stubs for this module.
+git remote add ME_QKART_FRONTEND_V2_MODULE_CHECKOUT_STUB git@gitlab.crio.do:ME_QKART_FRONTEND_V2_STUBS/ME_QKART_FRONTEND_V2_MODULE_CHECKOUT_STUB.git
+git pull ME_QKART_FRONTEND_V2_MODULE_CHECKOUT_STUB master --allow-unrelated-histories --no-edit
+
+
+
+From gitlab.crio.do:ME_QKART_FRONTEND_V2_STUBS/ME_QKART_FRONTEND_V2_MODULE_CHECKOUT_STUB
+ * branch            master     -> FETCH_HEAD
+ * [new branch]      master     -> ME_QKART_FRONTEND_V2_MODULE_CHECKOUT_STUB/master
+Auto-merging src/ipConfig.json
+CONFLICT (add/add): Merge conflict in src/ipConfig.json
+Auto-merging src/index.js
+CONFLICT (add/add): Merge conflict in src/index.js
+Auto-merging src/components/Register.js
+CONFLICT (add/add): Merge conflict in src/components/Register.js
+Auto-merging src/components/Register.css
+CONFLICT (add/add): Merge conflict in src/components/Register.css
+Auto-merging src/components/Products.js
+CONFLICT (add/add): Merge conflict in src/components/Products.js
+Auto-merging src/components/Products.css
+CONFLICT (add/add): Merge conflict in src/components/Products.css
+Auto-merging src/components/ProductCard.js
+CONFLICT (add/add): Merge conflict in src/components/ProductCard.js
+Auto-merging src/components/Login.js
+CONFLICT (add/add): Merge conflict in src/components/Login.js
+Auto-merging src/components/Header.js
+CONFLICT (add/add): Merge conflict in src/components/Header.js
+Auto-merging src/components/Checkout.js
+CONFLICT (add/add): Merge conflict in src/components/Checkout.js
+Auto-merging src/components/Cart.js
+CONFLICT (add/add): Merge conflict in src/components/Cart.js
+Auto-merging src/App.js
+CONFLICT (add/add): Merge conflict in src/App.js
+Auto-merging setup.sh
+CONFLICT (add/add): Merge conflict in setup.sh
+Auto-merging __CRIO__/metadata.json
+Automatic merge failed; fix conflicts and then commit the result.
+
+
+
+
+cd ~/workspace/jayarajito-ME_QKART_FRONTEND_V2
+git add .
+git commit -m “ME_QKART_FRONTEND_V2_MODULE_CHECKOUT”
+git push -u origin master
+
+# Ensure you have no pending commits
+git status
+
+
+
+Note
+If all the tests are passing locally but the assessment fails, pull the latest stubs using below commands and ensure all the tests are passing locally
+
+
+
+cd ~/workspace/jayarajito-ME_QKART_FRONTEND_V2/
+git pull ME_QKART_FRONTEND_V2_MODULE_CHECKOUT_STUB master --allow-unrelated-histories --no-edit
+
+
+After you have pushed your changes, you can check this link to confirm if the remote Git repo has received your code.
+
+https://gitlab.crio.do/COHORT_ME_QKART_FRONTEND_V2_ENROLL_1684925308327/jayarajito-ME_QKART_FRONTEND_V2
