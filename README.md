@@ -452,3 +452,77 @@ git push -u originqkart main
 
 
 
+QKart Frontend Deployment to Vercel
+
+Configure the src/App.js to point to the backend URL. Example (ensure that there is no trailing / in the URL)
+
+ endpoint: `https://myqkart-frontend.onrender.com/api/v1`,
+
+ If you haven’t created an account on Vercel yet, then please sign up on Vercel using the Email option. Make sure you use the exact same email that is associated with your GitHub account.
+
+In the Crio Workspace, open a terminal within your project folder.
+
+**Note: Open your terminal in the primary directory of your project. In this case (**/workspace/<crio-user-id>-ME_QKART_FRONTEND_V2/)
+
+Run vercel login command in the terminal
+
+Move down to the "Continue with Email" option using the down-arrow key and hit Enter.
+
+Input the email address associated with your GitHub account.
+
+You’ll receive an email from Vercel, Click on the **Verify **button present in the mail.
+
+Now, go back to your Crio Workspace terminal and run the command ****vercel****.
+
+**For Setup and Deploy: **Press Y
+
+**Which scope do you want to deploy to: **Hit Enter
+
+**Link to existing project: **Press N
+
+Enter your project name qkart-frontend
+
+**In which directory is your code located: **By default ( **./ **). Make sure you’re in the primary directory of your project. Press Enter.
+
+**Want to modify these settings: **Press N
+** **
+
+If you get the following error after the above step:
+
+Then run the command: npm install react-scripts@5. And then again run the command: vercel.
+
+Ctrl+Click on the preview link to get a preview of how your application will look after it is deployed.
+
+https://qkart-frontend-blfujjhbr-jayarajs-projects.vercel.app/
+
+Once you’re sure that you want to proceed with this after checking the preview, run the command: vercel --prod.
+
+You will now get the Production Deployed link:
+
+https://qkart-frontend-r5aigvh7q-jayarajs-projects.vercel.app/
+
+
+After successful deployment, please go to package.json in the QKart Frontend V2 project primary folder, and change the react-scripts back to 4.0.3 as shown below:
+
+Just change the text, don’t do npm install.
+
+Only after doing the above step, move to the Milestone 3 and complete the Asessment.
+
+
+
+cd ~/workspace/jayarajito-ME_QKART_FRONTEND_V2
+
+git add .
+
+git commit -m "ME_QKART_FRONTEND_V2_MODULE_DEPLOYMENT"
+
+git push -u origin master
+
+
+# Ensure you have no pending commits
+
+git status
+
+
+https://gitlab.crio.do/COHORT_ME_QKART_FRONTEND_V2_ENROLL_1684925308327/jayarajito-ME_QKART_FRONTEND_V2
+
