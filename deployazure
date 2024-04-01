@@ -101,3 +101,22 @@ Enter initial commit to the top of the file.
 Save and close the git commit file.
 
 Don't worry about syncing your changes with the server at this point. The updates are copied up to GitHub when you publish the static web app.
+
+
+Create the static web app
+Current Azure and GitHub authenticated sessions are required to create a static web app. If you aren't already signed in to both providers, the extension prompts you to sign in during the creation process.
+
+Select F1 to open the Visual Studio Code command palette.
+Enter and select Azure Static Web Apps: Create Static Web App....
+
+Enter the following values for the remainder of the command palette prompts.
+
+Prompt	Value
+Subscription	Select the Concierge Subscription
+Name	Enter my-static-web-app-and-api
+Region	Select the region closest to you
+Preset	Select React
+Application code location	Enter react-app
+Output location	Enter dist
+
+Once the app is created, a confirmation notification is shown in Visual Studio Code.
