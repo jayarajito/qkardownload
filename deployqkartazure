@@ -1,0 +1,23 @@
+https://stackoverflow.com/questions/47806623/unrecognized-port-command
+
+https://stackoverflow.com/questions/69692842/error-message-error0308010cdigital-envelope-routinesunsupported
+In your package.json: change this line
+
+"start": "react-scripts start"
+to
+
+"start": "react-scripts --openssl-legacy-provider start"
+
+  In Windows you can set scripts in package.json:
+
+"start": " set PORT=portnumber && react-app-rewired start"
+or
+
+"start": " set PORT=3001 && react-script start".
+
+  
+
+git clone https://github.com/jayarajito/QKART.git
+
+cd QKART
+npm install
