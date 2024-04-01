@@ -39,7 +39,9 @@ Make sure to replace <YOUR_GITHUB_USERNAME> with your GitHub username.
   Go to the directory for your preferred front end framework.
   cd react-app
 
-  Install the application dependencies
+
+install python and check the verison python --version
+  Install the application dependencies 
   npm install
 
   Ensure the latest version of each dependency is installed with the following command.
@@ -120,3 +122,5 @@ Application code location	Enter react-app
 Output location	Enter dist
 
 Once the app is created, a confirmation notification is shown in Visual Studio Code.
+
+
