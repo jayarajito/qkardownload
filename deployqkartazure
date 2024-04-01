@@ -15,7 +15,12 @@ or
 
 "start": " set PORT=3001 && react-script start".
 
-  
+
+
+set NODE_OPTIONS=--openssl-legacy-provider
+
+
+
 
 git clone https://github.com/jayarajito/QKART.git
 
