@@ -44,6 +44,12 @@ install python and check the verison python --version
   Install the application dependencies 
   npm install
 
+https://nouthemes.com/knowledge-base/node-sass-command-failed-when-running-npm-install/
+https://github.com/nodejs/help/issues/3928
+
+
+
+
   Ensure the latest version of each dependency is installed with the following command.
 
   npm audit fix
