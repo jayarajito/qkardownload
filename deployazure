@@ -1,0 +1,103 @@
+https://learn.microsoft.com/en-us/training/modules/publish-static-web-app-api-preview-url/1-introduction?pivots=react
+
+Create a repository
+To begin, create a repository by using a GitHub template. A series of repository templates are available, which contain a starter app implemented in various front end frameworks.
+
+
+Go to the GitHub create from template page to open the template repository.
+
+https://github.com/new?template_name=mslearn-staticwebapp-api&template_owner=MicrosoftDocs
+  
+If prompted for Owner, select one of your GitHub accounts.
+
+For repository name, enter my-static-web-app-and-api.
+
+Select Create repository from template.
+
+As you create the project from a template, GitHub builds your repository in the background.
+
+
+  Run your app locally
+Now you have a GitHub repository named my-static-web-app-and-api in your GitHub account. Next, you clone the GitHub repo and run the code locally on your computer.
+
+Open a terminal window on your computer.
+
+If you're on Windows, you can enter cmd in the system tray search box.
+
+To clone the repository to your machine, paste the following code into the command prompt window.
+
+Make sure to replace <YOUR_GITHUB_USERNAME> with your GitHub username.
+
+
+  git clone https://github.com/jayarajito/my-static-web-app-and-api
+
+
+  Change to the directory for the source code you cloned.
+
+  cd my-static-web-app-and-api
+
+  Go to the directory for your preferred front end framework.
+  cd react-app
+
+  Install the application dependencies
+  npm install
+
+  Ensure the latest version of each dependency is installed with the following command.
+
+  npm audit fix
+
+  Run the front end client application.
+
+  npm start
+
+  Browse to your app
+When the application bundle is generated and compiled, a browser tab automatically opens to display your application running locally.
+
+Local host for react is http://localhost:3000.
+
+  Your app should say Loading data ... because there's no data or API yet. You add the API for your web app later in this lesson.
+
+In the terminal, press Ctrl+C to stop your batch job.
+
+
+  Create a static web app
+You created your own GitHub repository. Now you can create your own static web app using the Azure Static Web Apps extension for Visual Studio Code.
+  Install the Azure Static Web Apps extension for Visual Studio Code
+  
+Open Visual Studio Code.
+
+From the top menu, select View > Extensions, and enter Azure Static Web Apps in the search box.
+
+When the extension tab loads in Visual Studio Code, select Install.
+
+  Open the application folder
+Select F1 to open the Visual Studio Code command palette.
+
+Enter File: Open Folder....
+
+Select the my-static-web-app-and-api folder.
+
+Select Open to open the folder in Visual Studio Code.
+
+  Sign in to Azure in Visual Studio Code
+Select F1 to open the Visual Studio Code command palette.
+
+Enter Azure: Sign In and follow the prompts to authenticate.
+
+  Select your subscription
+Select F1 to open the Visual Studio Code command palette.
+
+Enter Azure: Select Subscriptions, and clear all selections except the Concierge Subscription.
+
+  Commit changes
+When you installed the application dependencies, some of the files in your project were updated in the process. In order to proceed, you need to commit those changes to the repository.
+
+Select F1 to open the Visual Studio Code command palette.
+
+Enter and select Git Commit All.
+
+Enter initial commit to the top of the file.
+
+Save and close the git commit file.
+
+Don't worry about syncing your changes with the server at this point. The updates are copied up to GitHub when you publish the static web app.
