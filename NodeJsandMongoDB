@@ -1,0 +1,91 @@
+
+git clone https://gitlab.crio.do/crio_bytes/me_nodejs_mongodb.git
+
+git clone git@gitlab.crio.do:crio_bytes/me_nodejs_mongodb.git
+
+
+
+
+cd /home/crio-user/workspace/bytes/me_nodejs_mongodb/Backend
+
+npm install
+
+npm start
+
+
+
+Populate MongoDB with sample data
+Execute the below commands to populate your NoSQL database with sample data
+
+cd /home/crio-user/workspace/bytes/me_nodejs_mongodb/Backend
+
+chmod +x setup.sh
+
+./setup.sh
+
+
+Install dependencies and start Frontend
+Open a new terminal and execute the below commands to (This can take 1-2 minutes)
+
+populate the config file with your workspace’s public IP address
+
+install the dependencies
+
+start the frontend application on port 8081
+
+
+cd /home/crio-user/workspace/bytes/me_nodejs_mongodb/Frontend
+
+chmod +x setup.sh
+
+./setup.sh
+
+npm install
+
+npm start
+
+
+Let’s now check the data stored and it’s format. Execute mongo command in the terminal to open the Mongo shell
+
+
+> 
+
+> // Select the "todoapp" database
+
+> use todoapp
+
+switched to db todoapp
+
+> 
+
+> // Print the count of documents in the "todos" collection
+
+> db.todos.find({}).count()
+
+5
+
+> 
+
+> // Print one of the documents in the "todos" collection
+
+> db.todos.find({}).limit(1).pretty()
+
+{
+
+        "_id" : ObjectId("6006c49837787704025198a2"),
+
+        "name" : "Play cricket",
+
+        "startDate" : ISODate("2021-01-06T00:00:00Z"),
+
+        "endDate" : ISODate("2021-01-07T00:00:00Z"),
+
+        "pending" : true,
+
+        "__v" : 0
+
+}
+
+> 
+
+
