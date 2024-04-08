@@ -89,3 +89,17 @@ switched to db todoapp
 > 
 
 
+curl -X POST http://localhost:8082/v1/todos -d '{"name": "Play tennis","startDate": "2021-01-07","endDate": "2021-01-09"}' -H 'Content-Type: application/json'
+
+
+curl -v -X "DELETE" http://3.110.186.246:8082/v1/todos/6613d932472f1f0c2a3ce52a
+
+
+
+curl -v -X PUT http://3.110.186.246:8082/v1/todos -d '{"_id": "6613d932472f1f0c2a3ce52a", "name": "Play tennis1","startDate": "2021-01-08","endDate": "2021-01-10"}' -H 'Content-Type: application/json'
+
+
+
+
+
+
