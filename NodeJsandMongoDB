@@ -99,6 +99,23 @@ curl -v -X "DELETE" http://3.110.186.246:8082/v1/todos/6613d932472f1f0c2a3ce52a
 curl -v -X PUT http://3.110.186.246:8082/v1/todos -d '{"_id": "6613d932472f1f0c2a3ce52a", "name": "Play tennis1","startDate": "2021-01-08","endDate": "2021-01-10"}' -H 'Content-Type: application/json'
 
 
+netstat -tulpn
+
+ /v1/todos/?startDateMin=2021-01-06&startDateMax=2021-01-11
+
+
+
+curl -v -X GET http://13.233.110.82:8082/v1/todos?startDateMin=2021-06-01&startDateMax=2021-11-01
+
+curl http://13.233.110.82:8082/v1/todos/?startDateMin=2021-01-06&startDateMax=2021-01-11
+
+curl http://13.233.110.82:8082/v1/todos?startDateMin=2021-01-06&startDateMax=2021-01-11
+
+post manworkiing is below
+curl -v -X GET http://13.233.110.82:8082/v1/todos?startDateMin=2021-01-06&startDateMax=2021-01-11
+
+
+
 
 
 
