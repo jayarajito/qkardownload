@@ -31,6 +31,7 @@ Make sure to replace <YOUR_GITHUB_USERNAME> with your GitHub username.
 
   git clone https://github.com/jayarajito/my-static-web-app-and-api
 
+git push https://github.com/jayarajito/my-static-web-app-and-api
 
   Change to the directory for the source code you cloned.
 
