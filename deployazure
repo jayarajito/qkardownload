@@ -327,3 +327,79 @@ Bash
 
 Copy
 npm start
+
+
+Microsoft.Azure.Functions.ExtensionBundle error remains after updating host.json and settings.json
+
+An extension bundle reference is defined by the extensionBundle section in a host.json as follows:
+
+JSON
+
+Copy
+{
+    "version": "2.0",
+    "extensionBundle": {
+        "id": "Microsoft.Azure.Functions.ExtensionBundle",
+        "version": "[4.0.0, 5.0.0)"
+    }
+}
+
+Functions:
+
+        products-delete: [DELETE] http://localhost:7071/api/products/{id}
+
+        products-get: [GET] http://localhost:7071/api/products
+
+        products-post: [POST] http://localhost:7071/api/products
+
+        products-put: [PUT] http://localhost:7071/api/products/{id}
+
+For detailed output, run func with --verbose flag.
+[2024-04-11T20:44:36.663Z] Worker process started and initialized.
+[2024-04-11T20:44:40.071Z] Host lock lease acquired by instance ID '000000000000000000000000DA200318'.
+
+
+Run the web app
+Your API is running. Now you need to configure your front-end app to make its HTTP request to your API. The front-end app runs on one port, and the API runs on a different port (7071). Each front-end framework can be configured to proxy HTTP requests to a port safely.
+
+Configure your proxy port
+Configure the proxy for your front-end app with the following steps:
+
+Open the file react-app/package.json.
+
+Locate the "proxy": "http://localhost:7071/", setting.
+
+Notice that the proxy's port points to 7071.
+
+Run your front-end web app
+Your API is already running on port 7071. Now, when you run your web app, it makes its HTTP requests to your API. Run your web app by following these steps:
+
+Open a second git terminal instance.
+
+Next, enter this command to go to the folder of your preferred front-end framework:
+
+Bash
+
+Copy
+cd react-app
+Run the front-end client application:
+
+Bash
+
+Copy
+npm start
+Browse to your app
+It's time to see your application running locally against the Azure Functions API.
+
+Browse to http://localhost:3000.
+You built your application, and now it's running locally making HTTP GET requests to your API. Now, stop your running app and API by pressing Ctrl-C in the terminals.
+
+Push your changes to GitHub
+You made changes to your API in the previous exercise. Commit those changes to the api branch and push them to GitHub by following these steps:
+
+In Visual Studio Code, open the command palette by pressing F1
+Type and select Git: Commit All. If Visual Studio Code prompts you to automatically stage all of your changes and commit them directly, select Yes.
+Enter a commit message such as api changes
+Open the command palette by pressing F1
+Type and select Git: Push
+If you're prompted with the message The branch 'api' has no upstream branch. Would you like to publish this branch? press the OK button
