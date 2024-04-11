@@ -59,7 +59,7 @@ https://github.com/nodejs/help/issues/3928
 
   npm start
 
-react-app-new
+react-app-new   use this folder and remove export use set and remove outputlocation
 
 For MAC use "export " for WINDOWS "set" 
 https://github.com/mattmakai/slack-starterbot/issues/6
