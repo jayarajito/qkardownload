@@ -403,3 +403,27 @@ Enter a commit message such as api changes
 Open the command palette by pressing F1
 Type and select Git: Push
 If you're prompted with the message The branch 'api' has no upstream branch. Would you like to publish this branch? press the OK button
+
+
+Create a Pull Request
+You pushed your api branch to GitHub. Now you want the GitHub Action to publish your web app and API in a preview URL. So your next step is to create a pull request against the main branch.
+
+Open a browser
+
+Navigate to your repository
+
+https://github.com/<YOUR_GITHUB_USERNAME>/my-static-web-app-and-api
+
+Select the Pull requests link
+
+Select the New pull request button
+
+Select the main branch from the base dropdown
+
+Select the api branch from the compare dropdown
+
+Select the Create pull request button
+
+Again, select the second Create pull request button
+
+Your GitHub Action is now triggered.
