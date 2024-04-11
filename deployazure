@@ -141,4 +141,189 @@ Output location	Enter dist
 
 Once the app is created, a confirmation notification is shown in Visual Studio Code.
 
+Pull the changes from GitHub
+Pull the latest changes from GitHub to bring down the workflow file created by Azure Static Web Apps service.
 
+Open the Command Palette by pressing Ctrl+Shift+P.
+
+Enter and select Git: Pull.
+
+Press Enter.
+
+Your shopping list web app needs an API. In this exercise, you build and run your API using an Azure Functions project. From there, you extend the API with a new function using the Azure Functions extension for Visual Studio Code.
+
+In this exercise, you complete the following steps:
+
+Create a branch as you prepare to make changes to your web app.
+Explore the Azure Function project.
+Create the HTTP GET function.
+Replace the function starter code with logic to get products.
+Configure the web app to proxy HTTP requests to the API.
+Run the API and the web app.
+
+
+Create an API branch
+Before making changes to an app, it's good practice to create a new branch for the changes. You're about to complete the API for your app, so now is a good time to create a branch.
+
+In Visual Studio Code, open the command palette by pressing F1.
+
+Enter and select Git: Checkout to....
+
+Select Create new branch.
+
+Enter api for the new branch name, and press Enter.
+
+You just created the api git branch.
+
+Open the command palette by pressing F1.
+
+Enter and select Git: Commit All.
+
+Enter the commit message api and press Enter.
+
+
+
+Create the HTTP GET function
+Your API has routes for manipulating the products for the shopping list, but it lacks a route for getting the products. Let's add that now.
+
+
+Install the Azure Functions extension for Visual Studio Code
+You can create and manage Azure Functions applications by using the Azure Functions extension for Visual Studio Code.
+
+Go to the Visual Studio Marketplace, and install the Azure Functions extension for Visual Studio Code.
+
+When the extension tab loads in Visual Studio Code, select Install.
+
+After installation is complete, select Reload.
+
+ Note
+
+Be sure to install the Azure Functions Core Tools, which allow you to run Azure Functions locally.
+
+https://learn.microsoft.com/en-us/azure/azure-functions/functions-run-local?tabs=windows%2Cisolated-process%2Cnode-v4%2Cpython-v2%2Chttp-trigger%2Ccontainer-apps&pivots=programming-language-javascript
+
+
+Create the function
+Now you extend your Azure Function app with a function to get your products.
+
+In Visual Studio Code, open the command palette by pressing F1.
+
+Enter and select Azure Functions: Create Function.
+
+When prompted to create a function, select HTTP Trigger.
+
+Enter products-get as the name of the function.
+
+Select Anonymous as the authentication level.
+
+ Note
+
+The Functions app is in the api folder, which separates it from the individual web app projects. All of the web apps using the front-end frameworks make calls to the same API. You can decide how to structure your application, but for this sample it helps to see them separated.
+
+Configure the HTTP Method and route endpoint
+Notice the folder api/products-get contains the file function.json. This file contains the configuration for your function.
+
+The route endpoint has the same name as the folder that contains the function, by convention. Because the function is created in the products-get folder, the route endpoint is generated as products-get, by default. However, you want the endpoint to be products.
+
+Configure your function:
+
+Open the file api/products-get/function.json.
+
+Notice the methods allow both GET and POST.
+
+Change the methods array to only allow GET requests.
+
+Add a "route": "products" entry after the methods array.
+
+Now your function is triggered on an HTTP GET request to products. Your function.json should look like the following code:
+
+JSON
+
+Copy
+{
+  "bindings": [
+    {
+      "authLevel": "anonymous",
+      "type": "httpTrigger",
+      "direction": "in",
+      "name": "req",
+      "methods": ["get"],
+      "route": "products"
+    },
+    {
+      "type": "http",
+      "direction": "out",
+      "name": "res"
+    }
+  ]
+}
+Update the function logic
+The file index.js in the folder api/products-get contains logic that runs when your make an HTTP request to the route.
+
+You need to update the logic to get your products. There's data access logic in the JavaScript module /shared/product-data.js. The product-data module exposes a function getProducts to get the products for the shopping list.
+
+Now, change the function endpoint to return the products:
+
+Open the file api/products-get/index.js.
+
+Replace its contents with the following code:
+
+JavaScript
+
+Copy
+const data = require('../shared/product-data');
+
+module.exports = async function (context, req) {
+  try {
+    const products = data.getProducts();
+    context.res.status(200).json(products);
+  } catch (error) {
+    context.res.status(500).send(error);
+  }
+};
+Your function gets the products and returns them with a status code of 200, when successful.
+
+Configure Cross-Origin Resource Sharing (CORS) locally
+You don't have to worry about CORS when you publish to Azure Static Web Apps. Azure Static Web Apps automatically configures your app so it can communicate with your API on Azure using a reverse proxy. But when running locally, you need to configure CORS to allow your web app and API to communicate.
+
+Now, tell Azure Functions to allow your web app to make HTTP requests to the API, on your computer.
+
+Create a file named api/local.settings.json.
+
+Add the following contents to the file:
+
+JSON
+
+Copy
+{
+  "Host": {
+    "CORS": "http://localhost:3000"
+  }
+}
+ Note
+
+The local.settings.json file is listed in the .gitignore file, which prevents this file from being pushed to GitHub. This is because you could store secrets in this file that you would not want in GitHub. This is why you had to create the file when you created your repo from the template.
+
+Run the API
+Now it's time to watch your web app and Azure Functions project work together. Start by running your Azure Functions project locally by following these steps:
+
+ Note
+
+Be sure to install the Azure Functions Core Tools, which allow you to run Azure Functions locally.
+
+Open a git terminal and go to the api folder:
+
+Bash
+
+Copy
+cd api
+Run the Azure Functions app locally:
+
+Bash
+
+Copy
+npm install
+Bash
+
+Copy
+npm start
