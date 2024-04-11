@@ -58,6 +58,12 @@ https://github.com/nodejs/help/issues/3928
 
   npm start
 
+react-app-new
+
+For MAC use "export " for WINDOWS "set" 
+https://github.com/mattmakai/slack-starterbot/issues/6
+https://codeforgeek.com/resolving-error-node-modules-node-sass-command-failed/
+
   Browse to your app
 When the application bundle is generated and compiled, a browser tab automatically opens to display your application running locally.
 
