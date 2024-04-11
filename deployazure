@@ -65,6 +65,11 @@ For MAC use "export " for WINDOWS "set"
 https://github.com/mattmakai/slack-starterbot/issues/6
 https://codeforgeek.com/resolving-error-node-modules-node-sass-command-failed/
 
+
+Why VS Code contains emphasized items but no error?
+
+Reload VS with the command Ctrl + shift + p and searching Developer: Reload Window
+
   Browse to your app
 When the application bundle is generated and compiled, a browser tab automatically opens to display your application running locally.
 
